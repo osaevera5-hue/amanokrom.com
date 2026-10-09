@@ -1,0 +1,876 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Amanokrom | Heritage, Identity & Community</title>
+
+    <meta name="description"
+          content="Learn about Amanokrom, its identity, traditional leadership, cultural heritage and commitment to communal progress in Akuapem, Ghana.">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- MAIN WEBSITE CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ABOUT PAGE STYLES -->
+    <style>
+        :root {
+            --about-green: #103c2c;
+            --about-dark: #08271d;
+            --about-gold: #c7a253;
+            --about-cream: #f7f3e9;
+            --about-text: #374239;
+        }
+
+        body.about-page {
+            margin: 0;
+            background: var(--about-cream);
+            color: var(--about-text);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* HERO */
+
+        .about-hero {
+            min-height: 440px;
+            padding: 90px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            background:
+                linear-gradient(
+                    rgba(5, 35, 24, .83),
+                    rgba(5, 35, 24, .72)
+                ),
+                url("images/palace.jpg") center top / cover no-repeat;
+            border-bottom: 5px solid var(--about-gold);
+        }
+
+        .about-hero-inner {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .about-eyebrow {
+            color: #e5c777;
+            font-size: 12px;
+            letter-spacing: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .about-hero h1 {
+            color: #fff;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(45px, 7vw, 76px);
+            font-weight: 600;
+            line-height: 1.1;
+            margin: 22px 0;
+        }
+
+        .about-hero h1 span {
+            color: #e5c777;
+        }
+
+        .about-hero p {
+            max-width: 680px;
+            margin: auto;
+            color: #f4f0e5;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .about-divider {
+            width: 75px;
+            height: 3px;
+            background: var(--about-gold);
+            margin: 25px auto;
+        }
+
+        /* GENERAL CONTENT */
+
+        .about-container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
+
+        .about-section {
+            padding: 75px 0;
+        }
+
+        .about-kicker {
+            color: #92702d;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .about-section h2 {
+            color: var(--about-green);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(34px, 5vw, 49px);
+            font-weight: 600;
+            line-height: 1.2;
+            margin: 14px 0 22px;
+        }
+
+        .about-section p {
+            color: var(--about-text);
+            font-size: 14px;
+            line-height: 2;
+            margin-bottom: 18px;
+        }
+
+        /* WHO WE ARE */
+
+        .about-who-grid {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .about-who-text {
+            padding: 10px 0;
+        }
+
+        .about-image {
+            min-height: 390px;
+            position: relative;
+            background:
+                linear-gradient(
+                    rgba(8, 39, 29, .08),
+                    rgba(8, 39, 29, .18)
+                ),
+                url("images/palace.jpg") center top / cover no-repeat;
+            border: 5px solid #fff;
+            outline: 1px solid #d8c79f;
+            box-shadow: 0 15px 40px rgba(8, 39, 29, .12);
+        }
+
+        .about-image-caption {
+            position: absolute;
+            left: 18px;
+            right: 18px;
+            bottom: 18px;
+            background: rgba(8, 39, 29, .92);
+            border-left: 3px solid var(--about-gold);
+            color: #fff;
+            padding: 17px 20px;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* IDENTITY */
+
+        .about-identity {
+            background: #fff;
+            border-top: 1px solid #e6ddc9;
+            border-bottom: 1px solid #e6ddc9;
+        }
+
+        .about-identity-grid {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 55px;
+            align-items: start;
+        }
+
+        .about-identity-heading {
+            padding-top: 10px;
+        }
+
+        .about-identity-heading h2 {
+            margin-bottom: 15px;
+        }
+
+        .about-identity-copy {
+            border-left: 3px solid var(--about-gold);
+            padding: 5px 0 5px 28px;
+        }
+
+        /* VALUES */
+
+        .about-values {
+            padding: 75px 0;
+        }
+
+        .about-values-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .about-values-heading p {
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .about-value-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .about-value-card {
+            background: #fff;
+            padding: 30px 25px;
+            border: 1px solid #e5dcc8;
+            border-top: 3px solid var(--about-gold);
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(8, 39, 29, .04);
+            transition: transform .25s, box-shadow .25s;
+        }
+
+        .about-value-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 30px rgba(8, 39, 29, .09);
+        }
+
+        .about-value-icon {
+            width: 58px;
+            height: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: var(--about-green);
+            color: #e5c777;
+            font-size: 22px;
+        }
+
+        .about-value-card h3 {
+            color: var(--about-green);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 25px;
+            margin: 0 0 12px;
+        }
+
+        .about-value-card p {
+            font-size: 13px;
+            line-height: 1.9;
+            margin: 0;
+        }
+
+        /* COMMUNITY */
+
+        .about-community {
+            background: var(--about-dark);
+            color: #fff;
+            padding: 70px 22px;
+            text-align: center;
+            border-top: 4px solid var(--about-gold);
+        }
+
+        .about-community-inner {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .about-community h2 {
+            color: #e5c777;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(35px, 5vw, 49px);
+            line-height: 1.2;
+            margin: 15px 0 20px;
+        }
+
+        .about-community p {
+            color: #f1eee5;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .about-history-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 13px 25px;
+            background: var(--about-gold);
+            color: var(--about-dark);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: background .25s, color .25s;
+        }
+
+        .about-history-link:hover {
+            background: #fff;
+            color: var(--about-green);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 768px) {
+            .about-hero {
+                min-height: 360px;
+                padding: 65px 20px;
+            }
+
+            .about-eyebrow {
+                font-size: 10px;
+                letter-spacing: 2px;
+            }
+
+            .about-hero p {
+                font-size: 13px;
+            }
+
+            .about-section {
+                padding: 50px 0;
+            }
+
+            .about-who-grid,
+            .about-identity-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .about-image {
+                min-height: 330px;
+            }
+
+            .about-identity-copy {
+                padding-left: 20px;
+            }
+
+            .about-value-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .about-values {
+                padding: 50px 0;
+            }
+
+            .about-community {
+                padding: 55px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body class="about-page">
+
+<!-- HEADER: SAME AS INDEX.HTML -->
+
+<header class="site-header" id="siteHeader">
+
+    <div class="header-container">
+
+        <a href="index.html" class="site-logo">
+            <img src="images/am ano-logo.jpeg" alt="Amanokrom Logo">
+
+            <div class="logo-text">
+                <span class="logo-title">AMANOKROM</span>
+                <span class="logo-subtitle">HERITAGE • CULTURE • UNITY</span>
+            </div>
+        </a>
+
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="main-nav" id="mainNav">
+
+            <ul class="nav-list">
+
+                <li>
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="about.html" class="nav-link active" aria-current="page">
+                        About <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About Amanokrom</a></li>
+                        <li><a href="about.html#mission">Mission & Vision</a></li>
+                        <li><a href="about.html#community">Our Community</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="history.html" class="nav-link">History</a>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="culture.html" class="nav-link">
+                        Culture <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="culture.html">Our Culture</a></li>
+                        <li><a href="culture.html#odwira">Odwira Festival</a></li>
+                        <li><a href="culture.html#traditions">Customs & Traditions</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="traditional-leaders.html" class="nav-link">
+                        Leadership <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="traditional-leaders.html">Traditional Leaders</a></li>
+                        <li><a href="traditional-leaders.html#chief">Chief</a></li>
+                        <li><a href="traditional-leaders.html#queen-mother">Queen Mother</a></li>
+                        <li><a href="traditional-leaders.html#council">Traditional Council</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="gallery.html" class="nav-link">
+                        Gallery <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="odwira12026">Odwira Gallery</a></li>
+                        <li><a href="gallery.html#videos">Videos</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="funeral.html" class="nav-link">Funeral</a>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="news.html" class="nav-link">
+                        News <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="news.html">Latest News</a></li>
+                        <li><a href="news.html#announcements">Announcements</a></li>
+                        <li><a href="news.html#events">Community Events</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="contact.html" class="nav-link contact-link">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ABOUT HERO -->
+
+<section class="about-hero" id="top">
+
+    <div class="about-hero-inner">
+
+        <span class="about-eyebrow">
+            Welcome to Amanokrom
+        </span>
+
+        <h1>Discover <span>Amanokrom</span></h1>
+
+        <div class="about-divider"></div>
+
+        <p>
+            A historic town on the Akuapem Ridge, where cultural heritage,
+            traditional leadership and community spirit continue to shape
+            a shared identity.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- WHO WE ARE -->
+
+<section class="about-section">
+
+    <div class="about-container about-who-grid">
+
+        <div class="about-who-text">
+
+            <span class="about-kicker">Who We Are</span>
+
+            <h2>A Town Shaped by Heritage and Community</h2>
+
+            <p>
+                Amanokrom is a historic town in the Akuapem area of Ghana's
+                Eastern Region, known for its cultural importance,
+                traditional leadership and place within the wider story
+                of Okuapeman.
+            </p>
+
+            <p>
+                Set on the Akuapem Ridge, the town combines scenic beauty
+                with rich social memory. Its history, customs and community
+                life connect present generations with the experiences
+                and traditions of their ancestors.
+            </p>
+
+            <p>
+                Its people are known for resilience, hospitality, reverence
+                for tradition and a firm commitment to communal progress.
+                These qualities continue to shape the character of
+                Amanokrom and its hopes for the future.
+            </p>
+
+        </div>
+
+        <div class="about-image" role="img" aria-label="Amanokrom heritage">
+
+            <div class="about-image-caption">
+                <strong>Amanokrom, Akuapem</strong><br>
+                A living heritage of tradition, community and belonging.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- OUR IDENTITY -->
+
+<section class="about-section about-identity" id="identity">
+
+    <div class="about-container about-identity-grid">
+
+        <div class="about-identity-heading">
+
+            <span class="about-kicker">Our Identity</span>
+
+            <h2>Tradition, Service and Responsibility</h2>
+
+        </div>
+
+        <div class="about-identity-copy">
+
+            <p>
+                As the seat of the Gyasehene within the Akuapem Traditional
+                Area, Amanokrom occupies a unique place in the political
+                and cultural life of the ridge.
+            </p>
+
+            <p>
+                The town's identity is inseparable from the values of
+                service, courage, dignity, loyalty and disciplined
+                self-development.
+            </p>
+
+            <p>
+                These values provide a foundation for community life,
+                respect for traditional institutions and the collective
+                responsibility to preserve our heritage while working
+                towards a stronger future.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- OUR VALUES -->
+
+<section class="about-values" id="mission">
+
+    <div class="about-container">
+
+        <div class="about-values-heading">
+
+            <span class="about-kicker">What Defines Us</span>
+
+            <h2>The Values of Amanokrom</h2>
+
+            <p>
+                Our identity is reflected in the principles we honour,
+                the way we treat one another and the future we seek
+                to build together.
+            </p>
+
+        </div>
+
+        <div class="about-value-grid">
+
+            <article class="about-value-card">
+
+                <div class="about-value-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+
+                <h3>Service</h3>
+
+                <p>
+                    We value service to our community and respect the
+                    responsibilities that come with leadership,
+                    citizenship and belonging.
+                </p>
+
+            </article>
+
+
+            <article class="about-value-card">
+
+                <div class="about-value-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+
+                <h3>Courage</h3>
+
+                <p>
+                    We honour the courage and resilience that have
+                    helped shape our history and continue to inspire
+                    our community.
+                </p>
+
+            </article>
+
+
+            <article class="about-value-card">
+
+                <div class="about-value-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+
+                <h3>Dignity</h3>
+
+                <p>
+                    We uphold the dignity of our people, our customs
+                    and our traditional institutions.
+                </p>
+
+            </article>
+
+
+            <article class="about-value-card">
+
+                <div class="about-value-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+
+                <h3>Loyalty</h3>
+
+                <p>
+                    We cherish loyalty to our community, respect for
+                    our heritage and a shared commitment to unity.
+                </p>
+
+            </article>
+
+
+            <article class="about-value-card">
+
+                <div class="about-value-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+
+                <h3>Tradition</h3>
+
+                <p>
+                    We preserve the stories, customs and cultural
+                    knowledge passed down through generations.
+                </p>
+
+            </article>
+
+
+            <article class="about-value-card">
+
+                <div class="about-value-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+
+                <h3>Self-Development</h3>
+
+                <p>
+                    We encourage discipline, learning, personal growth
+                    and collective progress for a stronger community.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COMMUNITY -->
+
+<section class="about-community" id="community">
+
+    <div class="about-community-inner">
+
+        <span class="about-eyebrow">Our Past • Our Present • Our Future</span>
+
+        <h2>Preserving Our Heritage for Generations</h2>
+
+        <p>
+            Amanokrom's story belongs to its people. Through respect for
+            our traditions, commitment to our community and pride in our
+            identity, we continue to honour the past while building
+            towards a brighter future.
+        </p>
+
+        <a href="history.html" class="about-history-link">
+            Explore Our History
+            <i class="fas fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER: SAME AS INDEX.HTML -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    <img src="images/am ano-logo.jpeg" alt="Amanokrom Logo">
+
+                    <div>
+                        <strong>AMANOKROM</strong>
+                        <span>HERITAGE • CULTURE • UNITY</span>
+                    </div>
+                </a>
+
+                <p>
+                    Amanokrom is a proud Akuapem community rich
+                    in culture, history, tradition and unity.
+                    We honour our heritage while working together
+                    for a brighter future.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Amanokrom</a></li>
+                    <li><a href="history.html">Our History</a></li>
+                    <li><a href="culture.html">Culture & Traditions</a></li>
+                    <li><a href="traditional-leaders.html">Traditional Leaders</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Explore</h3>
+
+                <ul>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                    <li><a href="odwira12026">Odwira Gallery</a></li>
+                    <li><a href="funeral.html">Funeral Announcements</a></li>
+                    <li><a href="news.html">Latest News</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-contact">
+
+                <h3>Get in Touch</h3>
+
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    Amanokrom, Akuapem, Ghana
+                </p>
+
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="contact.html">Contact the Community</a>
+                </p>
+
+                <a href="contact.html" class="footer-contact-btn">
+                    Send an Enquiry
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; <span id="currentYear">2026</span>
+                Amanokrom. All Rights Reserved.
+            </p>
+
+            <p>
+                Preserving Our Heritage for Generations.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<a href="#top" class="back-to-top" id="backToTop"
+   aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+
+<!-- EXISTING WEBSITE JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```

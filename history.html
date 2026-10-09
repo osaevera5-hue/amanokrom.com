@@ -1,0 +1,1110 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>History of Amanokrom | Heritage & Tradition</title>
+
+    <meta name="description"
+          content="Discover the history, origins, traditional institutions and heritage of Amanokrom in Akuapem, Ghana.">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- YOUR EXISTING WEBSITE CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- HISTORY PAGE DESIGN -->
+    <style>
+        :root {
+            --history-green: #103c2c;
+            --history-dark: #08271d;
+            --history-gold: #c7a253;
+            --history-cream: #f7f3e9;
+            --history-text: #374239;
+        }
+
+        body.history-page {
+            background: var(--history-cream);
+            color: var(--history-text);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .history-page *,
+        .history-page *::before,
+        .history-page *::after {
+            box-sizing: border-box;
+        }
+
+        .history-page img {
+            max-width: 100%;
+        }
+
+        /* HISTORY HERO */
+
+        .history-hero {
+            min-height: 480px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 90px 22px;
+            color: #fff;
+            background:
+                linear-gradient(
+                    115deg,
+                    rgba(5, 35, 24, .91),
+                    rgba(9, 48, 34, .67)
+                ),
+                url("images/amano-logo.jpeg") center top / cover no-repeat;
+            border-bottom: 5px solid var(--history-gold);
+        }
+
+        .history-hero-inner {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .history-overline {
+            color: #e6c778;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .history-hero h1 {
+            color: #fff;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(45px, 7vw, 78px);
+            font-weight: 600;
+            line-height: 1.05;
+            margin: 22px 0;
+        }
+
+        .history-hero h1 span {
+            color: #e4c16f;
+        }
+
+        .history-hero p {
+            max-width: 690px;
+            margin: auto;
+            color: #f4f0e5;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        .history-ornament {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 25px auto;
+            color: var(--history-gold);
+        }
+
+        .history-ornament::before,
+        .history-ornament::after {
+            content: "";
+            width: 55px;
+            height: 1px;
+            background: var(--history-gold);
+        }
+
+        /* INTRODUCTION */
+
+        .history-intro {
+            max-width: 950px;
+            margin: auto;
+            padding: 80px 24px 55px;
+            text-align: center;
+        }
+
+        .history-kicker {
+            display: inline-block;
+            color: #92702d;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .history-intro h2,
+        .history-section-heading h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(34px, 5vw, 49px);
+            font-weight: 600;
+            line-height: 1.15;
+            color: var(--history-green);
+            margin: 14px 0 20px;
+        }
+
+        .history-intro p {
+            max-width: 790px;
+            margin: auto;
+            font-size: 15px;
+            line-height: 2;
+        }
+
+        /* CONTENT LAYOUT */
+
+        .history-content {
+            width: min(1120px, 92%);
+            margin: auto;
+            padding: 10px 0 75px;
+        }
+
+        .history-section-heading {
+            text-align: center;
+            max-width: 750px;
+            margin: 35px auto 40px;
+        }
+
+        .history-section-heading p {
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .history-card {
+            position: relative;
+            background: #fff;
+            padding: 36px 40px;
+            margin-bottom: 27px;
+            border: 1px solid #e6ddc9;
+            border-top: 3px solid var(--history-gold);
+            box-shadow: 0 8px 28px rgba(12, 43, 29, .045);
+            border-radius: 3px;
+        }
+
+        .history-card h3 {
+            color: var(--history-green);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(27px, 3vw, 35px);
+            font-weight: 600;
+            line-height: 1.25;
+            margin: 12px 0 18px;
+        }
+
+        .history-card p {
+            color: var(--history-text);
+            font-size: 14px;
+            line-height: 2;
+            margin: 0 0 17px;
+        }
+
+        .history-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .history-card strong {
+            color: var(--history-green);
+        }
+
+        .history-card .history-kicker {
+            font-size: 10px;
+        }
+
+        .history-card ul {
+            padding-left: 22px;
+            margin: 10px 0 20px;
+        }
+
+        .history-card li {
+            padding-left: 5px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .history-highlight {
+            color: #896722;
+            font-weight: 600;
+        }
+
+        /* FEATURE QUOTATIONS */
+
+        .history-quote {
+            position: relative;
+            overflow: hidden;
+            background: var(--history-green);
+            color: #fff;
+            text-align: center;
+            padding: 42px 30px;
+            margin: 35px 0;
+            border: 1px solid var(--history-gold);
+        }
+
+        .history-quote::before {
+            content: "“";
+            display: block;
+            color: rgba(220, 190, 116, .3);
+            font-family: Georgia, serif;
+            font-size: 95px;
+            line-height: .75;
+        }
+
+        .history-quote blockquote {
+            color: #f0d58f;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(27px, 4vw, 39px);
+            font-style: italic;
+            font-weight: 600;
+            line-height: 1.4;
+            margin: 15px 0;
+        }
+
+        .history-quote p {
+            color: #f4efe2;
+            font-size: 13px;
+            line-height: 1.8;
+            margin: 8px 0 0;
+        }
+
+        /* TWO-COLUMN CARDS */
+
+        .history-two-column {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+            margin-bottom: 27px;
+        }
+
+        .history-two-column .history-card {
+            margin-bottom: 0;
+            padding: 30px;
+        }
+
+        .history-two-column .history-card h3 {
+            font-size: 29px;
+        }
+
+        /* CLOSING */
+
+        .history-closing {
+            background: var(--history-dark);
+            color: #fff;
+            text-align: center;
+            padding: 75px 24px;
+            border-top: 4px solid var(--history-gold);
+        }
+
+        .history-closing-inner {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .history-closing h2 {
+            color: #e4c16f;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(37px, 5vw, 52px);
+            line-height: 1.2;
+            margin: 15px 0 20px;
+        }
+
+        .history-closing p {
+            color: #f0eee5;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        /* BACK TO TOP */
+
+        .history-page .back-to-top {
+            z-index: 1000;
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 768px) {
+            .history-hero {
+                min-height: 390px;
+                padding: 70px 20px;
+            }
+
+            .history-overline {
+                letter-spacing: 2px;
+                font-size: 10px;
+            }
+
+            .history-hero p {
+                font-size: 14px;
+            }
+
+            .history-intro {
+                padding: 55px 22px 35px;
+            }
+
+            .history-content {
+                width: 92%;
+                padding-bottom: 45px;
+            }
+
+            .history-card {
+                padding: 26px 23px;
+            }
+
+            .history-two-column {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .history-quote {
+                padding: 32px 20px;
+            }
+
+            .history-closing {
+                padding: 55px 22px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .history-hero h1 {
+                font-size: 43px;
+            }
+
+            .history-card h3 {
+                font-size: 27px;
+            }
+
+            .history-card p,
+            .history-card li {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body class="history-page">
+
+<!-- =========================
+     HEADER / NAVIGATION
+     SAME AS INDEX.HTML
+========================= -->
+
+<header class="site-header" id="siteHeader">
+
+    <div class="header-container">
+
+        <a href="index.html" class="site-logo">
+            <img src="images/amano-logo.jpeg"
+                 alt="Amanokrom Logo">
+
+            <div class="logo-text">
+                <span class="logo-title">AMANOKROM</span>
+                <span class="logo-subtitle">HERITAGE • CULTURE • UNITY</span>
+            </div>
+        </a>
+
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="main-nav" id="mainNav">
+
+            <ul class="nav-list">
+
+                <li>
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="about.html" class="nav-link">
+                        About <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About Amanokrom</a></li>
+                        <li><a href="about.html#mission">Mission & Vision</a></li>
+                        <li><a href="about.html#community">Our Community</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="history.html" class="nav-link active" aria-current="page">History</a>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="culture.html" class="nav-link">
+                        Culture <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="culture.html">Our Culture</a></li>
+                        <li><a href="culture.html#odwira">Odwira Festival</a></li>
+                        <li><a href="culture.html#traditions">Customs & Traditions</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="traditional-leaders.html" class="nav-link">
+                        Leadership <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="traditional-leaders.html">Traditional Leaders</a></li>
+                        <li><a href="traditional-leaders.html#chief">Chief</a></li>
+                        <li><a href="traditional-leaders.html#queen-mother">Queen Mother</a></li>
+                        <li><a href="traditional-leaders.html#council">Traditional Council</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="gallery.html" class="nav-link">
+                        Gallery <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="odwira12026">Odwira Gallery</a></li>
+                        <li><a href="gallery.html#videos">Videos</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="funeral.html" class="nav-link">Funeral</a>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="news.html" class="nav-link">
+                        News <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="news.html">Latest News</a></li>
+                        <li><a href="news.html#announcements">Announcements</a></li>
+                        <li><a href="news.html#events">Community Events</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="contact.html" class="nav-link contact-link">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HISTORY HERO
+========================= -->
+
+<section class="history-hero">
+
+    <div class="history-hero-inner">
+
+        <span class="history-overline">
+            Our Roots • Our Identity • Our Legacy
+        </span>
+
+        <h1>The History<br>of <span>Amanokrom</span></h1>
+
+        <div class="history-ornament">
+            <i class="fas fa-landmark"></i>
+        </div>
+
+        <p>
+            Discover the origins, traditional institutions, spiritual
+            heritage and enduring story of Amanokrom in the Akuapem
+            traditional area of Ghana.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTRODUCTION
+========================= -->
+
+<section class="history-intro">
+
+    <span class="history-kicker">Our Story</span>
+
+    <h2>A Heritage Rooted in Courage and Tradition</h2>
+
+    <p>
+        The history of Amanokrom is preserved through oral traditions,
+        ancestral accounts, traditional leadership, sacred places and
+        community customs. These stories connect generations and help
+        preserve the identity and heritage of the people.
+    </p>
+
+</section>
+
+
+<main class="history-content">
+
+    <!-- WAR CHANT -->
+
+    <div class="history-quote">
+
+        <blockquote>
+            Wopɛ ko! Wopɛ ko! Wopɛ ko!<br>
+            Ɔko yɛ me adedade.
+        </blockquote>
+
+        <p>
+            “You love war! You love war! You love war!
+            War is my nature. War is my life.”
+        </p>
+
+        <p>
+            Traditional war chant attributed to Gyasehene Abentia (Horn).
+        </p>
+
+    </div>
+
+
+    <!-- FOUNDING -->
+
+    <section class="history-card">
+
+        <span class="history-kicker">Chapter One • The Beginning</span>
+
+        <h3>The Founding of Amanokrom</h3>
+
+        <p>
+            According to the community's oral history, Amanokrom was
+            founded around <strong>1742</strong> through the coming
+            together of Nana Amanor Awuah of the Asona Abusua and
+            Konton Mensah of the Denkyira Agona lineage.
+        </p>
+
+        <p>
+            Nana Amanor Awuah's ancestral traditions are connected with
+            Adanse Ofoase, Nana Ahenkorakese and historical movements
+            associated with Nana Safori and the formation of the Akuapem
+            political structure in the early eighteenth century.
+        </p>
+
+        <p>
+            These traditions also preserve connections with the Ofori
+            Stool Dynasty and ancestral movements through Pamen in
+            Akyem Abuakwa.
+        </p>
+
+        <p>
+            Konton Mensah's family history is associated with Dodowa
+            and Amanoakura. The meeting of these lineages forms an
+            important part of the community's founding story.
+        </p>
+
+    </section>
+
+
+    <!-- MIGRATION -->
+
+    <section class="history-card">
+
+        <span class="history-kicker">Migration and Settlement</span>
+
+        <h3>From Akropong to Amanokrom</h3>
+
+        <p>
+            Oral accounts recount a dispute around 1740 during the Ohum
+            Festival involving regent Ofei Boa and Nana Amanor Awuah.
+            The disagreement is remembered as part of the circumstances
+            that led Nana Amanor Awuah to leave Akropong.
+        </p>
+
+        <p>
+            According to these accounts, he travelled towards Akyem
+            Abuakwa, passing through Adesaase and Odumase near Dodowa.
+            There he encountered Konton Mensah, and the two lineages
+            established a settlement that became known as Amanokrom.
+        </p>
+
+        <p>
+            The settlement's history reflects migration, family alliances
+            and the development of traditional authority in the area.
+        </p>
+
+    </section>
+
+
+    <!-- GYAASE -->
+
+    <section class="history-card">
+
+        <span class="history-kicker">Traditional Authority</span>
+
+        <h3>The Gyaase of Okuapemman</h3>
+
+        <p>
+            The Gyaase occupies an important place in the traditional
+            organisation and ceremonial life of Okuapemman. Its
+            responsibilities are remembered through customary duties,
+            community institutions and traditional observances.
+        </p>
+
+        <p>
+            Local traditions associate the Osomanyawo family, linked
+            with Konton Mensah, with spiritual responsibilities and
+            important roles in the traditional life of Amanokrom.
+        </p>
+
+        <p>
+            Amanokrom's historical identity also reflects the relationships
+            among its Asona, Agona, Bratu, Oyoko and other families.
+        </p>
+
+    </section>
+
+
+    <!-- AKATAMANSU WAR -->
+
+    <section class="history-card">
+
+        <span class="history-kicker">Courage and Spiritual Heritage</span>
+
+        <h3>The Akatamansu War and Senyani Abena</h3>
+
+        <p>
+            The Akatamansu War forms part of the historical traditions
+            associated with the ancestors of Amanokrom and the wider
+            Akuapem area. Stories of warfare are preserved alongside
+            accounts of courage, spiritual protection and traditional
+            responsibilities.
+        </p>
+
+        <p>
+            Senyani Abena is remembered as an important deity in these
+            traditions. Its associated saying is:
+        </p>
+
+        <div class="history-quote">
+
+            <blockquote>Se wo nya no a, womin.</blockquote>
+
+            <p>“Once it possesses you, you cannot escape.”</p>
+
+        </div>
+
+        <p>
+            Oral accounts describe rituals involving sacred fire, the
+            jumping of flames and a sacred pot containing water and
+            leaves. The traditions also refer to sacred regalia and
+            a shrine location associated with the area where the
+            Presbyterian Junior High School now stands.
+        </p>
+
+    </section>
+
+
+    <!-- DEITIES -->
+
+    <div class="history-two-column">
+
+        <section class="history-card">
+
+            <span class="history-kicker">Sacred Traditions</span>
+
+            <h3>Adenkyemsu Kofi and Oboansa</h3>
+
+            <p>
+                Adenkyemsu Kofi is remembered among the traditional
+                spiritual figures associated with the area's heritage.
+                Oboansa, also referred to in connection with the Sika
+                River, is linked in local tradition with Senyani Abena.
+            </p>
+
+            <p>
+                Local accounts describe Oboansa as flowing from
+                Amanokrom through Rudurudu towards Dodowa.
+            </p>
+
+        </section>
+
+
+        <section class="history-card">
+
+            <span class="history-kicker">Protection and Belief</span>
+
+            <h3>Kyenku and Obosomase</h3>
+
+            <p>
+                Kyenku, also known in the tradition as Kyenku Bayaw,
+                is associated with Obosomase and remembered as a wind
+                deity believed to protect warriors.
+            </p>
+
+            <p>
+                These traditions reflect the place of spiritual beliefs
+                in the historical memory of communities across the
+                Akuapem hills.
+            </p>
+
+        </section>
+
+    </div>
+
+
+    <!-- ASAFO -->
+
+    <section class="history-card">
+
+        <span class="history-kicker">Community Organisation</span>
+
+        <h3>The Asafo Companies and Their Symbols</h3>
+
+        <p>
+            Asafo institutions have played important roles in traditional
+            organisation, public ceremonies and the collective identity
+            of the community. Traditional accounts mention the following
+            symbols and instruments:
+        </p>
+
+        <ul>
+            <li><strong>Darunta:</strong> the double gongon.</li>
+            <li><strong>Abogyese:</strong> the war drum.</li>
+            <li><strong>Frankaa:</strong> the war flag.</li>
+        </ul>
+
+        <p>
+            Groups remembered in local accounts include Ankyease, Bretu,
+            Porebon and Twafo, with Twafo associated with traditional
+            scouting duties.
+        </p>
+
+    </section>
+
+
+    <!-- TRADE ROUTES -->
+
+    <section class="history-card">
+
+        <span class="history-kicker">Movement and Commerce</span>
+
+        <h3>Historical Trade Routes</h3>
+
+        <p>
+            Amanokrom's location connected it to routes leading through
+            Adawso, Mpeko, Obotra and Abonse. These routes formed part
+            of wider networks through which people, goods and information
+            moved between inland communities and the coast.
+        </p>
+
+        <p>
+            Community accounts also refer to routes from the area near
+            the Presbyterian Junior High School, along the River Rudurudu
+            and through Brumanso towards Lower Dodowa.
+        </p>
+
+        <p>
+            Some oral accounts describe the detention of enslaved people
+            in caves at Abonse before they were taken towards coastal
+            markets. This history should be remembered as part of the
+            painful history of enslavement and the trade in human beings.
+        </p>
+
+    </section>
+
+
+    <!-- OKOMFO ANOKYE -->
+
+    <section class="history-card">
+
+        <span class="history-kicker">Oral History</span>
+
+        <h3>Okomfo Anokye and the Oware Tradition</h3>
+
+        <p>
+            A local tradition connects Okomfo Anokye with the making
+            or playing of Oware on a sacred stone using his heels.
+            The account describes marbles appearing and disappearing
+            in a manner remembered as miraculous.
+        </p>
+
+        <p>
+            The saying <span class="history-highlight">“Asutewa 3so Aguare”</span>
+            is preserved in connection with this tradition. It expresses
+            the idea that a community may be small in number yet remain
+            resourceful, self-sufficient and difficult to defeat.
+        </p>
+
+    </section>
+
+
+    <!-- TABOOS AND SACRED WATERS -->
+
+    <div class="history-two-column">
+
+        <section class="history-card">
+
+            <span class="history-kicker">Customs and Taboos</span>
+
+            <h3>Tuesday Traditions</h3>
+
+            <p>
+                Tuesday is remembered as a taboo day in the community's
+                traditional calendar. Oral accounts describe restrictions
+                connected with Nmore, blood sacrifices, the announcement
+                of death or bad news, and the handling of certain
+                agricultural produce and firewood.
+            </p>
+
+            <p>
+                These customs form part of the community's traditional
+                understanding of respect, observance and spiritual
+                responsibility.
+            </p>
+
+        </section>
+
+
+        <section class="history-card">
+
+            <span class="history-kicker">Sacred Waters</span>
+
+            <h3>Fridays and Fofie</h3>
+
+            <p>
+                Friday, known in this tradition as Fofie, is associated
+                with purification practices involving the palace of
+                Okofrobour, Atrankogua households and the wider community.
+            </p>
+
+            <p>
+                Tradition forbids entering the sacred river on Fridays.
+                A deity is also said in oral accounts to appear in the
+                form of a golden hen accompanied by chicks.
+            </p>
+
+        </section>
+
+    </div>
+
+
+    <!-- SACRED ARTIFACT -->
+
+    <section class="history-card">
+
+        <span class="history-kicker">Sacred Heritage</span>
+
+        <h3>The Sacred Earthenware Pot and Beads</h3>
+
+        <p>
+            A sacred earthenware pot associated with Konton, Amanokrom
+            and the Osomanyawa tradition holds a special place in local
+            accounts. The pot and its beads are traditionally believed
+            to be connected with healing, fertility, strength and
+            prosperity.
+        </p>
+
+        <p>
+            These beliefs form part of the community's spiritual heritage
+            and the oral traditions passed between generations.
+        </p>
+
+    </section>
+
+
+    <!-- PRESENT DAY -->
+
+    <section class="history-card">
+
+        <span class="history-kicker">Heritage Today</span>
+
+        <h3>Preserving the Legacy of Amanokrom</h3>
+
+        <p>
+            Today, Amanokrom continues to honour its history through
+            traditional leadership, cultural observances, family histories
+            and community life. Its heritage remains an important part
+            of the identity of its people.
+        </p>
+
+        <p>
+            The present Stool is occupied by
+            <strong>Oyeeman Okofrobo Osim Kwatia II</strong>, representing
+            the continuing traditional leadership of Amanokrom.
+        </p>
+
+        <p>
+            Preserving the community's history helps future generations
+            understand their roots, respect their elders and carry their
+            cultural heritage forward.
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     CLOSING SECTION
+========================= -->
+
+<section class="history-closing">
+
+    <div class="history-closing-inner">
+
+        <span class="history-overline">
+            Amanokrom • Akuapem • Ghana
+        </span>
+
+        <h2>Our Heritage, Our Pride</h2>
+
+        <p>
+            The story of Amanokrom lives through its people, its traditions,
+            its institutions and the memories passed from one generation
+            to the next. Together, we preserve our heritage for generations.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+     SAME AS INDEX.HTML
+========================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    <img src="images/am ano-logo.jpeg"
+                         alt="Amanokrom Logo">
+
+                    <div>
+                        <strong>AMANOKROM</strong>
+                        <span>HERITAGE • CULTURE • UNITY</span>
+                    </div>
+                </a>
+
+                <p>
+                    Amanokrom is a proud Akuapem community rich
+                    in culture, history, tradition and unity.
+                    We honour our heritage while working together
+                    for a brighter future.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Amanokrom</a></li>
+                    <li><a href="history.html">Our History</a></li>
+                    <li><a href="culture.html">Culture & Traditions</a></li>
+                    <li><a href="traditional-leaders.html">Traditional Leaders</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Explore</h3>
+
+                <ul>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                    <li><a href="odwira12026">Odwira Gallery</a></li>
+                    <li><a href="funeral.html">Funeral Announcements</a></li>
+                    <li><a href="news.html">Latest News</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>Get in Touch</h3>
+
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    Amanokrom, Akuapem, Ghana
+                </p>
+
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="contact.html">Contact the Community</a>
+                </p>
+
+                <a href="contact.html" class="footer-contact-btn">
+                    Send an Enquiry
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; <span id="currentYear">2026</span>
+                Amanokrom. All Rights Reserved.
+            </p>
+
+            <p>
+                Preserving Our Heritage for Generations.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<a href="#top" class="back-to-top" id="backToTop"
+   aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+
+<!-- USE THE EXISTING WEBSITE JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```

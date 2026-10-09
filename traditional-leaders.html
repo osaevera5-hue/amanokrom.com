@@ -1,0 +1,1051 @@
+ ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Traditional Leaders | Amanokrom</title>
+
+    <meta name="description" content="Meet the traditional leaders of Amanokrom and view their profiles.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --royal-green: #103d2b;
+            --deep-green: #09291e;
+            --gold: #c9a44c;
+            --cream: #f8f4e9;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: var(--cream);
+            color: #424b44;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* PAGE HERO */
+
+        .leaders-hero {
+            position: relative;
+            min-height: 390px;
+            padding: 90px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background:
+                linear-gradient(
+                    rgba(5, 35, 24, 0.78),
+                    rgba(5, 35, 24, 0.84)
+                ),
+                url('images/palace.jpg') center 35% / cover no-repeat;
+        }
+
+        .leaders-hero-content {
+            max-width: 800px;
+        }
+
+        .hero-label {
+            display: block;
+            margin-bottom: 15px;
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .leaders-hero h1 {
+            margin: 0;
+            color: var(--white);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(42px, 7vw, 72px);
+            line-height: 1.1;
+        }
+
+        .hero-line {
+            width: 75px;
+            height: 3px;
+            background: var(--gold);
+            margin: 24px auto;
+        }
+
+        .leaders-hero p {
+            max-width: 650px;
+            margin: 0 auto;
+            color: #f2eee5;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        /* INTRODUCTION */
+
+        .leaders-intro {
+            max-width: 850px;
+            margin: auto;
+            padding: 65px 22px 25px;
+            text-align: center;
+        }
+
+        .section-label {
+            color: #967126;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .leaders-intro h2 {
+            margin: 12px 0 15px;
+            color: var(--royal-green);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(32px, 5vw, 46px);
+        }
+
+        .leaders-intro p {
+            margin: 0;
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        /* SEARCH */
+
+        .leaders-tools {
+            max-width: 1250px;
+            margin: 25px auto 0;
+            padding: 0 22px;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            max-width: 520px;
+            margin: auto;
+            padding: 0 17px;
+            background: var(--white);
+            border: 1px solid #ded5c0;
+            border-radius: 4px;
+        }
+
+        .search-box i {
+            color: #92722d;
+        }
+
+        .search-box input {
+            width: 100%;
+            min-width: 0;
+            padding: 15px 0;
+            border: none;
+            outline: none;
+            background: transparent;
+            color: var(--deep-green);
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+        }
+
+        .search-box input::placeholder {
+            color: #8b918b;
+        }
+
+        .leader-count {
+            margin: 15px 0 0;
+            color: #737b73;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        /* LEADERS GRID */
+
+        .leaders-section {
+            max-width: 1250px;
+            margin: auto;
+            padding: 30px 22px 80px;
+        }
+
+        .leaders-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .leader-card {
+            min-width: 0;
+            overflow: hidden;
+            background: var(--white);
+            border: 1px solid #e7deca;
+            border-radius: 5px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.11);
+        }
+
+        .leader-photo {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            overflow: hidden;
+            background: #e9e3d6;
+        }
+
+        .leader-photo img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: transform 0.5s ease;
+        }
+
+        .leader-card:hover .leader-photo img {
+            transform: scale(1.04);
+        }
+
+        .leader-info {
+            padding: 19px 12px 22px;
+            text-align: center;
+        }
+
+        .leader-info h3 {
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 0 15px;
+            color: var(--royal-green);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1.25;
+            overflow-wrap: anywhere;
+        }
+
+        .profile-btn {
+            display: inline-block;
+            padding: 11px 19px;
+            background: var(--gold);
+            border: 1px solid var(--gold);
+            border-radius: 3px;
+            color: var(--deep-green);
+            font-size: 11px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .profile-btn i {
+            margin-left: 7px;
+        }
+
+        .profile-btn:hover {
+            background: var(--royal-green);
+            border-color: var(--royal-green);
+            color: var(--white);
+        }
+
+        .no-results {
+            display: none;
+            padding: 40px 15px;
+            text-align: center;
+            color: var(--royal-green);
+            font-size: 14px;
+        }
+
+        /* CLOSING SECTION */
+
+        .leaders-cta {
+            padding: 65px 22px;
+            text-align: center;
+            background: #eee6d4;
+        }
+
+        .leaders-cta h2 {
+            margin: 12px 0;
+            color: var(--royal-green);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(30px, 5vw, 43px);
+        }
+
+        .leaders-cta p {
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        .history-btn {
+            display: inline-block;
+            margin-top: 22px;
+            padding: 13px 23px;
+            background: var(--royal-green);
+            color: var(--white);
+            font-size: 12px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .history-btn:hover {
+            background: #1b573d;
+            color: var(--white);
+        }
+
+        /* BACK TO TOP */
+
+        .back-to-top {
+            z-index: 100;
+        }
+
+        /* TABLETS */
+
+        @media (max-width: 950px) {
+            .leaders-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 18px;
+            }
+
+            .leader-info h3 {
+                font-size: 20px;
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 650px) {
+            .leaders-hero {
+                min-height: 330px;
+                padding: 75px 18px;
+            }
+
+            .leaders-intro {
+                padding-top: 45px;
+            }
+
+            .leaders-section {
+                padding: 25px 14px 55px;
+            }
+
+            .leaders-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 13px;
+            }
+
+            .leader-info {
+                padding: 14px 8px 17px;
+            }
+
+            .leader-info h3 {
+                min-height: 52px;
+                font-size: 18px;
+            }
+
+            .profile-btn {
+                padding: 10px 11px;
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .leaders-grid {
+                gap: 9px;
+            }
+
+            .leader-info h3 {
+                font-size: 16px;
+            }
+
+            .profile-btn {
+                padding: 9px 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="site-header" id="siteHeader">
+    <div class="header-container">
+
+        <a href="index.html" class="site-logo">
+            <img src="images/am ano-logo.jpeg" alt="Amanokrom Logo">
+
+            <div class="logo-text">
+                <span class="logo-title">AMANOKROM</span>
+                <span class="logo-subtitle">HERITAGE • CULTURE • UNITY</span>
+            </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Open navigation menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="main-nav" id="mainNav">
+            <ul class="nav-list">
+
+                <li>
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="about.html" class="nav-link">
+                        About <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About Amanokrom</a></li>
+                        <li><a href="about.html#mission">Mission & Vision</a></li>
+                        <li><a href="about.html#community">Our Community</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="history.html" class="nav-link">History</a>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="culture.html" class="nav-link">
+                        Culture <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="culture.html">Our Culture</a></li>
+                        <li><a href="culture.html#odwira">Odwira Festival</a></li>
+                        <li><a href="culture.html#traditions">Customs & Traditions</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="traditional-leaders.html" class="nav-link active">
+                        Leadership <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="traditional-leaders.html">Traditional Leaders</a></li>
+                        <li><a href="traditional-leaders.html#leader1">Chief</a></li>
+                        <li><a href="traditional-leaders.html#leader2">Queen Mother</a></li>
+                        <li><a href="traditional-leaders.html#council">Traditional Council</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="gallery.html" class="nav-link">
+                        Gallery <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="odwira12026">Odwira Gallery</a></li>
+                        <li><a href="gallery.html#videos">Videos</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="funeral.html" class="nav-link">Funeral</a>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="news.html" class="nav-link">
+                        News <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="news.html">Latest News</a></li>
+                        <li><a href="news.html#announcements">Announcements</a></li>
+                        <li><a href="news.html#events">Community Events</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="contact.html" class="nav-link contact-link">Contact</a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="leaders-hero" id="top">
+        <div class="leaders-hero-content">
+
+            <span class="hero-label">Heritage • Tradition • Service</span>
+
+            <h1>Our Traditional Leaders</h1>
+
+            <div class="hero-line"></div>
+
+            <p>
+                Meet the traditional leaders of Amanokrom.
+                Discover the people who represent our heritage,
+                uphold our customs and contribute to our community.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- =========================
+         INTRODUCTION
+    ========================= -->
+
+    <section class="leaders-intro">
+        <span class="section-label">The People Behind Our Heritage</span>
+
+        <h2>Meet Our Leaders</h2>
+
+        <p>
+            Explore the profiles of our traditional leaders.
+            Select a profile to learn more about each leader
+            and their role in Amanokrom.
+        </p>
+    </section>
+
+    <!-- =========================
+         SEARCH
+    ========================= -->
+
+    <div class="leaders-tools">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input
+                type="search"
+                id="leaderSearch"
+                placeholder="Search leaders by name..."
+                aria-label="Search traditional leaders"
+            >
+        </div>
+
+        <p class="leader-count" id="leaderCount">
+            Showing 30 leaders
+        </p>
+    </div>
+
+    <!-- =========================
+         ALL 30 LEADERS
+    ========================= -->
+
+    <section class="leaders-section">
+        <div class="leaders-grid" id="leadersGrid">
+
+            <!-- LEADER 1 -->
+            <article class="leader-card" id="leader1" data-name="Oyeeman Okofrobuo Osim Kwatia II">
+                <div class="leader-photo">
+                    <img src="images/osim1.jpg" alt="Oyeeman Okofrobuo Osim Kwatia II" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Oyeeman Okofrobuo Osim Kwatia II</h3>
+                    <a href="leader1.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 2 -->
+            <article class="leader-card" id="leader2" data-name="Nana Manko Aba II">
+                <div class="leader-photo">
+                    <img src="images/adae3.webp" alt="Nana Manko Aba II" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Nana Manko Aba II</h3>
+                    <a href="leader2.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 3 -->
+            <article class="leader-card" data-name="Nana Atta Fianko II">
+                <div class="leader-photo">
+                    <img src="images/Ankyeasehene.jpeg" alt="Nana Atta Fianko II" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Nana Atta Fianko II</h3>
+                    <a href="leader3.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 4 -->
+            <article class="leader-card" data-name="Leader 4">
+                <div class="leader-photo">
+                    <img src="images/leader4.jpg" alt="Traditional Leader 4" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 4</h3>
+                    <a href="leader4.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 5 -->
+            <article class="leader-card" data-name="Leader 5">
+                <div class="leader-photo">
+                    <img src="images/leader5.jpg" alt="Traditional Leader 5" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 5</h3>
+                    <a href="leader5.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 6 -->
+            <article class="leader-card" data-name="Leader 6">
+                <div class="leader-photo">
+                    <img src="images/leader6.jpg" alt="Traditional Leader 6" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 6</h3>
+                    <a href="leader6.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 7 -->
+            <article class="leader-card" data-name="Leader 7">
+                <div class="leader-photo">
+                    <img src="images/leader7.jpg" alt="Traditional Leader 7" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 7</h3>
+                    <a href="leader7.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 8 -->
+            <article class="leader-card" data-name="Leader 8">
+                <div class="leader-photo">
+                    <img src="images/leader8.jpg" alt="Traditional Leader 8" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 8</h3>
+                    <a href="leader8.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 9 -->
+            <article class="leader-card" data-name="Leader 9">
+                <div class="leader-photo">
+                    <img src="images/leader9.jpg" alt="Traditional Leader 9" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 9</h3>
+                    <a href="leader9.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 10 -->
+            <article class="leader-card" data-name="Leader 10">
+                <div class="leader-photo">
+                    <img src="images/leader10.jpg" alt="Traditional Leader 10" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 10</h3>
+                    <a href="leader10.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 11 -->
+            <article class="leader-card" data-name="Leader 11">
+                <div class="leader-photo">
+                    <img src="images/leader11.jpg" alt="Traditional Leader 11" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 11</h3>
+                    <a href="leader11.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 12 -->
+            <article class="leader-card" data-name="Leader 12">
+                <div class="leader-photo">
+                    <img src="images/leader12.jpg" alt="Traditional Leader 12" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 12</h3>
+                    <a href="leader12.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 13 -->
+            <article class="leader-card" data-name="Leader 13">
+                <div class="leader-photo">
+                    <img src="images/leader13.jpg" alt="Traditional Leader 13" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 13</h3>
+                    <a href="leader13.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 14 -->
+            <article class="leader-card" data-name="Leader 14">
+                <div class="leader-photo">
+                    <img src="images/leader14.jpg" alt="Traditional Leader 14" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 14</h3>
+                    <a href="leader14.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 15 -->
+            <article class="leader-card" data-name="Leader 15">
+                <div class="leader-photo">
+                    <img src="images/leader15.jpg" alt="Traditional Leader 15" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 15</h3>
+                    <a href="leader15.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 16 -->
+            <article class="leader-card" data-name="Leader 16">
+                <div class="leader-photo">
+                    <img src="images/leader16.jpg" alt="Traditional Leader 16" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 16</h3>
+                    <a href="leader16.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 17 -->
+            <article class="leader-card" data-name="Leader 17">
+                <div class="leader-photo">
+                    <img src="images/leader17.jpg" alt="Traditional Leader 17" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 17</h3>
+                    <a href="leader17.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 18 -->
+            <article class="leader-card" data-name="Leader 18">
+                <div class="leader-photo">
+                    <img src="images/leader18.jpg" alt="Traditional Leader 18" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 18</h3>
+                    <a href="leader18.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 19 -->
+            <article class="leader-card" data-name="Leader 19">
+                <div class="leader-photo">
+                    <img src="images/leader19.jpg" alt="Traditional Leader 19" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 19</h3>
+                    <a href="leader19.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 20 -->
+            <article class="leader-card" data-name="Leader 20">
+                <div class="leader-photo">
+                    <img src="images/leader20.jpg" alt="Traditional Leader 20" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 20</h3>
+                    <a href="leader20.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 21 -->
+            <article class="leader-card" data-name="Leader 21">
+                <div class="leader-photo">
+                    <img src="images/leader21.jpg" alt="Traditional Leader 21" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 21</h3>
+                    <a href="leader21.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 22 -->
+            <article class="leader-card" data-name="Leader 22">
+                <div class="leader-photo">
+                    <img src="images/leader22.jpg" alt="Traditional Leader 22" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 22</h3>
+                    <a href="leader22.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 23 -->
+            <article class="leader-card" data-name="Leader 23">
+                <div class="leader-photo">
+                    <img src="images/leader23.jpg" alt="Traditional Leader 23" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 23</h3>
+                    <a href="leader23.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 24 -->
+            <article class="leader-card" data-name="Leader 24">
+                <div class="leader-photo">
+                    <img src="images/leader24.jpg" alt="Traditional Leader 24" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 24</h3>
+                    <a href="leader24.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 25 -->
+            <article class="leader-card" data-name="Leader 25">
+                <div class="leader-photo">
+                    <img src="images/leader25.jpg" alt="Traditional Leader 25" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 25</h3>
+                    <a href="leader25.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 26 -->
+            <article class="leader-card" data-name="Leader 26">
+                <div class="leader-photo">
+                    <img src="images/leader26.jpg" alt="Traditional Leader 26" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 26</h3>
+                    <a href="leader26.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 27 -->
+            <article class="leader-card" data-name="Leader 27">
+                <div class="leader-photo">
+                    <img src="images/leader27.jpg" alt="Traditional Leader 27" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 27</h3>
+                    <a href="leader27.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 28 -->
+            <article class="leader-card" data-name="Leader 28">
+                <div class="leader-photo">
+                    <img src="images/leader28.jpg" alt="Traditional Leader 28" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 28</h3>
+                    <a href="leader28.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 29 -->
+            <article class="leader-card" data-name="Leader 29">
+                <div class="leader-photo">
+                    <img src="images/leader29.jpg" alt="Traditional Leader 29" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 29</h3>
+                    <a href="leader29.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- LEADER 30 -->
+            <article class="leader-card" data-name="Leader 30">
+                <div class="leader-photo">
+                    <img src="images/leader30.jpg" alt="Traditional Leader 30" loading="lazy">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader 30</h3>
+                    <a href="leader30.html" class="profile-btn">View Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="no-results" id="noResults">
+            <i class="fas fa-search"></i>
+            <p>No leaders found. Please try another name.</p>
+        </div>
+    </section>
+
+    <!-- =========================
+         CLOSING SECTION
+    ========================= -->
+
+    <section class="leaders-cta" id="council">
+        <span class="section-label">Amanokrom Heritage</span>
+
+        <h2>Preserving Our Traditional Heritage</h2>
+
+        <p>
+            We honour the people and traditions that connect
+            generations and continue to shape our community.
+        </p>
+
+        <a href="history.html" class="history-btn">
+            Discover Our History <i class="fas fa-arrow-right"></i>
+        </a>
+    </section>
+
+</main>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="site-footer">
+    <div class="container">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <img src="images/am ano-logo.jpeg" alt="Amanokrom Logo">
+
+                    <div>
+                        <strong>AMANOKROM</strong>
+                        <span>HERITAGE • CULTURE • UNITY</span>
+                    </div>
+                </a>
+
+                <p>
+                    Amanokrom is a proud Akuapem community rich
+                    in culture, history, tradition and unity.
+                    We honour our heritage while working together
+                    for a brighter future.
+                </p>
+
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Amanokrom</a></li>
+                    <li><a href="history.html">Our History</a></li>
+                    <li><a href="culture.html">Culture & Traditions</a></li>
+                    <li><a href="traditional-leaders.html">Traditional Leaders</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                    <li><a href="odwira12026">Odwira Gallery</a></li>
+                    <li><a href="funeral.html">Funeral Announcements</a></li>
+                    <li><a href="news.html">Latest News</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Get in Touch</h3>
+
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    Amanokrom, Akuapem, Ghana
+                </p>
+
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="contact.html">Contact the Community</a>
+                </p>
+
+                <a href="contact.html" class="footer-contact-btn">
+                    Send an Enquiry <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; <span id="currentYear">2026</span>
+                Amanokrom. All Rights Reserved.
+            </p>
+
+            <p>Preserving Our Heritage for Generations.</p>
+        </div>
+
+    </div>
+</footer>
+
+<a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+<script src="script.js"></script>
+
+<script>
+    // Search leaders by name
+    const leaderSearch = document.getElementById('leaderSearch');
+    const leaderCards = document.querySelectorAll('.leader-card');
+    const leaderCount = document.getElementById('leaderCount');
+    const noResults = document.getElementById('noResults');
+
+    function searchLeaders() {
+        const searchTerm = leaderSearch.value.toLowerCase().trim();
+        let visibleCount = 0;
+
+        leaderCards.forEach(function(card) {
+            const name = card.dataset.name.toLowerCase();
+            const matches = name.includes(searchTerm);
+
+            card.style.display = matches ? '' : 'none';
+
+            if (matches) {
+                visibleCount++;
+            }
+        });
+
+        leaderCount.textContent =
+            'Showing ' + visibleCount +
+            (visibleCount === 1 ? ' leader' : ' leaders');
+
+        noResults.style.display =
+            visibleCount === 0 ? 'block' : 'none';
+    }
+
+    leaderSearch.addEventListener('input', searchLeaders);
+</script>
+
+</body>
+</html>
+```

@@ -1,0 +1,1284 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>News & Announcements | Amanokrom</title>
+
+  <meta name="description" content="Stay informed about Amanokrom community news, cultural celebrations, Odwira 2026, traditional ceremonies and upcoming events.">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <!-- Existing website stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root {
+      --aman-green: #123d2b;
+      --aman-green-light: #1e5a3d;
+      --aman-gold: #c5a04d;
+      --aman-cream: #f8f5ec;
+      --aman-white: #ffffff;
+      --aman-text: #30372f;
+      --aman-muted: #6b716b;
+    }
+
+    /* GENERAL */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--aman-cream);
+      color: var(--aman-text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1200px;
+    }
+
+    /* HERO SECTION */
+ 
+.hero-section {
+        min-height: 200px;
+    padding: 40px 20px;
+    background:
+        linear-gradient(rgba(10, 45, 30, 0.65), rgba(10, 45, 30, 0.65)),
+        url("images/announce.webp") center 40% / cover no-repeat;
+    color: #ffffff;
+    text-align: center;
+    border-bottom: 4px solid var(--aman-gold);
+}
+
+.hero-section h1 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+ 
+  .hero-section {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 25px 20px !important;
+    margin: 0 !important;
+    display: block !important;
+}
+
+/* .hero-section .container {
+    height: auto !important;
+    min-height: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}  */
+
+ 
+    /* SECTION HEADINGS */
+
+    .news-section,
+    .events-section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      margin-bottom: 38px;
+    }
+
+    .section-title h2 {
+      color: var(--aman-green);
+      font-size: clamp(28px, 3vw, 36px);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: var(--aman-muted);
+      margin-bottom: 0;
+    }
+
+    .section-title h2::after {
+      content: "";
+      display: block;
+      width: 65px;
+      height: 4px;
+      background: var(--aman-gold);
+      margin-top: 15px;
+    }
+
+    /* NEWS CARDS */
+
+    .news-card {
+      height: 100%;
+      background: var(--aman-white);
+      border: 1px solid #e7e2d5;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(20, 40, 25, 0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(20, 40, 25, 0.12);
+    }
+
+    .news-image {
+      height: 245px;
+      overflow: hidden;
+      background: #e7e2d5;
+    }
+
+    .news-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      cursor: zoom-in;
+      transition: transform 0.4s ease;
+    }
+
+    .news-card:hover .news-image img {
+      transform: scale(1.04);
+    }
+
+    .news-content {
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      height: calc(100% - 245px);
+    }
+
+    .news-date {
+      color: #806523;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .news-date i {
+      margin-right: 7px;
+    }
+
+    .news-content h4 {
+      color: var(--aman-green);
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.45;
+      margin-bottom: 14px;
+    }
+
+    .news-content p {
+      color: #60665f;
+      font-size: 14px;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    .view-gallery-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid var(--aman-green);
+      border-radius: 5px;
+      background: var(--aman-green);
+      color: var(--aman-white);
+      font-size: 13px;
+      font-weight: 700;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .view-gallery-btn:hover {
+      background: var(--aman-gold);
+      border-color: var(--aman-gold);
+      color: #17251b;
+    }
+
+    /* UPCOMING EVENTS */
+
+    .events-section {
+      background: #eee9dc;
+      border-top: 1px solid #e2dac8;
+    }
+
+    .event-item {
+      background: var(--aman-white);
+      border: 1px solid #e2ddcf;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 28px;
+      box-shadow: 0 5px 18px rgba(20, 40, 25, 0.05);
+    }
+
+    .event-image {
+      height: 100%;
+      min-height: 300px;
+      background: #e7e2d5;
+      overflow: hidden;
+    }
+
+    .event-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      max-height: 380px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      cursor: zoom-in;
+      transition: transform 0.4s ease;
+    }
+
+    .event-image img:hover {
+      transform: scale(1.03);
+    }
+
+    .event-content {
+      padding: 30px;
+    }
+
+    .event-content h3 {
+      color: var(--aman-green);
+      font-size: 25px;
+      font-weight: 800;
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+
+    .event-content p {
+      color: #60665f;
+      font-size: 15px;
+      white-space: normal;
+      margin-bottom: 22px;
+    }
+
+    .event-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding-top: 18px;
+      border-top: 1px solid #eee8da;
+    }
+
+    .read-btn {
+      display: inline-block;
+      padding: 11px 23px;
+      background: var(--aman-green);
+      color: var(--aman-white);
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: background 0.2s ease;
+    }
+
+    .read-btn:hover {
+      background: var(--aman-gold);
+      color: #17251b;
+    }
+
+    .event-date {
+      color: #806523;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* EVENT FILTER TABS */
+
+    .event-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .event-tabs button {
+      border: 1px solid var(--aman-green);
+      background: transparent;
+      color: var(--aman-green);
+      border-radius: 30px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .event-tabs button:hover,
+    .event-tabs button.active {
+      background: var(--aman-green);
+      color: var(--aman-white);
+    }
+
+    .event-item[hidden] {
+      display: none !important;
+    }
+
+    /* IMAGE LIGHTBOX */
+
+    .image-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: rgba(0, 0, 0, 0.92);
+      align-items: center;
+      justify-content: center;
+      padding: 55px 20px 25px;
+    }
+
+    .image-modal.open {
+      display: flex;
+    }
+
+    .modal-content-image {
+      display: block;
+      max-width: 95%;
+      max-height: 85vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 12px;
+      right: 28px;
+      color: #ffffff;
+      font-size: 42px;
+      font-weight: 400;
+      line-height: 1;
+      cursor: pointer;
+      background: transparent;
+      border: 0;
+    }
+
+    .close-modal:hover {
+      color: #e6c66f;
+    }
+
+    .modal-caption {
+      position: absolute;
+      bottom: 12px;
+      left: 15px;
+      right: 15px;
+      color: #ffffff;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (min-width: 992px) {
+      .event-tabs {
+        margin-top: 0;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hero-section {
+        padding: 70px 18px;
+      }
+
+      .hero-section p {
+        font-size: 15px;
+      }
+
+      .news-section,
+      .events-section {
+        padding: 55px 0;
+      }
+
+      .news-image {
+        height: 230px;
+      }
+
+      .news-content {
+        padding: 22px;
+      }
+
+      .event-image,
+      .event-image img {
+        min-height: 220px;
+        max-height: 280px;
+      }
+
+      .event-content {
+        padding: 22px;
+      }
+
+      .event-content h3 {
+        font-size: 21px;
+      }
+
+      .event-actions {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .close-modal {
+        right: 18px;
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+
+      <a href="index.html" class="site-logo">
+        <img
+          src="images/amano-logo.jpeg"
+          alt="Amanokrom Logo"
+          onerror="this.onerror=null;this.src='images/am ano-logo.jpeg';">
+
+        <div class="logo-text">
+          <span class="logo-title">AMANOKROM</span>
+          <span class="logo-subtitle">HERITAGE • CULTURE • UNITY</span>
+        </div>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+              aria-label="Open navigation menu"
+              aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-list">
+
+          <li><a href="index.html" class="nav-link">Home</a></li>
+
+          <li class="has-dropdown">
+            <a href="about.html" class="nav-link">
+              About <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="about.html">About Amanokrom</a></li>
+              <li><a href="about.html#mission">Mission & Vision</a></li>
+              <li><a href="about.html#community">Our Community</a></li>
+            </ul>
+          </li>
+
+          <li><a href="history.html" class="nav-link">History</a></li>
+
+          <li class="has-dropdown">
+            <a href="culture.html" class="nav-link">
+              Culture <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="culture.html">Our Culture</a></li>
+              <li><a href="culture.html#odwira">Odwira Festival</a></li>
+              <li><a href="culture.html#traditions">Customs & Traditions</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <a href="traditional-leaders.html" class="nav-link">
+              Leadership <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="traditional-leaders.html">Traditional Leaders</a></li>
+              <li><a href="traditional-leaders.html#chief">Chief</a></li>
+              <li><a href="traditional-leaders.html#queen-mother">Queen Mother</a></li>
+              <li><a href="traditional-leaders.html#council">Traditional Council</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <a href="gallery.html" class="nav-link">
+              Gallery <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="gallery.html">Photo Gallery</a></li>
+              <li><a href="odwira12026.html">Odwira Gallery</a></li>
+              <li><a href="gallery.html#videos">Videos</a></li>
+            </ul>
+          </li>
+
+          <li><a href="funeral.html" class="nav-link">Funeral</a></li>
+
+          <li class="has-dropdown">
+            <a href="news.html" class="nav-link active">
+              News <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="news.html">Latest News</a></li>
+              <li><a href="news.html#announcements">Announcements</a></li>
+              <li><a href="news.html#events">Community Events</a></li>
+            </ul>
+          </li>
+
+          <li><a href="contact.html" class="nav-link contact-link">Contact</a></li>
+
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="container">
+
+      <h1>Announcements & Community Updates</h1>
+
+      <p>
+        Stay informed about cultural celebrations, development projects,
+        traditional ceremonies, educational initiatives, youth programmes,
+        and important community announcements from Amanokrom.
+      </p>
+
+      <div class="hero-badge">
+        Heritage • Progress • Unity
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- LATEST NEWS -->
+  <section class="news-section" id="announcements">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Latest News</h2>
+        <p>Discover what is happening across the Amanokrom community.</p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- NEWS 1: ODWIRA 2026 -->
+        <div class="col-lg-4 col-md-6">
+          <article class="news-card">
+
+            <div class="news-image">
+              <img
+                src="images/odwura2026.jpeg"
+                alt="Odwira 2026 celebrations"
+                class="zoom-image"
+                loading="lazy">
+            </div>
+
+            <div class="news-content">
+
+              <div class="news-date">
+                <i class="fa-regular fa-calendar"></i>
+                21st September – 2nd October, 2026
+              </div>
+
+              <h4>Odwira 2026: Moments of Heritage</h4>
+
+              <p>
+                From 21st September to 2nd October 2026, experience the
+                sights, sounds, traditions, and memorable moments of Odwira
+                through photographs and videos. Explore the celebrations,
+                people, ceremonies, and rich cultural heritage of Amanokrom
+                and Akuapem.
+              </p>
+
+              <a href="odwira12026.html" class="view-gallery-btn">
+                <i class="fa-solid fa-photo-film"></i>
+                <span>View Photos & Videos</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+          </article>
+        </div>
+
+
+        <!-- NEWS 2: ADAE BUTUW -->
+        <div class="col-lg-4 col-md-6">
+          <article class="news-card">
+
+            <div class="news-image">
+              <img
+                src="images/adae1.webp"
+                alt="Ad ae Butuw traditional observance"
+                class="zoom-image"
+                loading="lazy">
+            </div>
+
+            <div class="news-content">
+
+              <div class="news-date">
+                <i class="fa-regular fa-calendar"></i>
+                12th August, 2026
+              </div>
+
+              <h4>
+                Awukudae Butuw: A Sacred Akan Traditional Observance
+              </h4>
+
+              <p>
+                Awukudae Butuw, also referred to as Adae Butuw, is a sacred
+                observance in the Akan calendar. Discover its traditional
+                significance and its connection with the cultural practices
+                of Amanokrom and the wider Akuapem community.
+              </p>
+
+              <a href="adaebutu.php" class="view-gallery-btn">
+                <i class="fa-solid fa-photo-film"></i>
+                <span>View Photos & Videos</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+          </article>
+        </div>
+
+
+        <!-- NEWS 3: SEVENTH AWUKUDAE -->
+        <div class="col-lg-4 col-md-6">
+          <article class="news-card">
+
+            <div class="news-image">
+              <img
+                src="images/awuku1.jpeg"
+                alt="Seventh Awukudae celebration"
+                class="zoom-image"
+                loading="lazy">
+            </div>
+
+            <div class="news-content">
+
+              <div class="news-date">
+                <i class="fa-regular fa-calendar"></i>
+                1st July, 2026
+              </div>
+
+              <h4>
+                The Seventh Awukudae: Tradition, Dignity and Heritage
+              </h4>
+
+              <p>
+                The Seventh Awukudae was marked with dignity and important
+                traditional observances. During the proceedings, Nana Osim
+                addressed the gathering on the forthcoming 200th anniversary
+                of the Odwira Festival.
+              </p>
+
+              <a href="awukudae.html" class="view-gallery-btn">
+                <i class="fa-solid fa-photo-film"></i>
+                <span>View Photos & Videos</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+          </article>
+        </div>
+
+
+        <!-- NEWS 4: ARTISTIC ENACTMENT -->
+        <div class="col-lg-4 col-md-6">
+          <article class="news-card">
+
+            <div class="news-image">
+              <img
+                src="images/enact2.jpeg"
+                alt="Odwira 200 artistic enactment"
+                class="zoom-image"
+                loading="lazy">
+            </div>
+
+            <div class="news-content">
+
+              <div class="news-date">
+                <i class="fa-regular fa-calendar"></i>
+                24th July, 2026
+              </div>
+
+              <h4>
+                Odwira@200 Artistic Enactment Comes Alive in Amanokrom
+              </h4>
+
+              <p>
+                A celebration of Akuapem's rich history, culture, and
+                traditions brought the story of Odwira to life through
+                artistic performance and a public lecture on 24th July 2026.
+              </p>
+
+              <a href="enactment.php" class="view-gallery-btn">
+                <i class="fa-solid fa-photo-film"></i>
+                <span>View Photos & Videos</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+          </article>
+        </div>
+
+
+        <!-- NEWS 5: CLIMATE DIALOGUE -->
+        <div class="col-lg-4 col-md-6">
+          <article class="news-card">
+
+            <div class="news-image">
+              <img
+                src="images/climate1.jpeg"
+                alt="Climate Beyond Borders community dialogue"
+                class="zoom-image"
+                loading="lazy">
+            </div>
+
+            <div class="news-content">
+
+              <div class="news-date">
+                <i class="fa-regular fa-calendar"></i>
+                31st May, 2026
+              </div>
+
+              <h4>Amanokrom Leaders Address Environmental Challenges</h4>
+
+              <p>
+                The Climate Beyond Borders Caravan team visited the
+                Amanokrom Kingdom for a traditional and indigenous-based
+                dialogue on tackling climate change and biodiversity loss.
+              </p>
+
+              <a href="climate.html" class="view-gallery-btn">
+                <i class="fa-solid fa-photo-film"></i>
+                <span>View Photos & Videos</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+          </article>
+        </div>
+
+
+        <!-- NEWS 6: BUSINESS SEMINAR -->
+        <div class="col-lg-4 col-md-6">
+          <article class="news-card">
+
+            <div class="news-image">
+              <img
+                src="images/seminar7.jpeg"
+                alt="Business and personal development seminar"
+                class="zoom-image"
+                loading="lazy">
+            </div>
+
+            <div class="news-content">
+
+              <div class="news-date">
+                <i class="fa-regular fa-calendar"></i>
+                30th May, 2026
+              </div>
+
+              <h4>
+                Build the Business. Strengthen the Mind. Grow Your Success
+              </h4>
+
+              <p>
+                This professional training event focused on helping
+                participants improve business systems and personal
+                mindsets to support growth, productivity, and success.
+              </p>
+
+              <a href="masterclass.php" class="view-gallery-btn">
+                <i class="fa-solid fa-photo-film"></i>
+                <span>View Photos & Videos</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- UPCOMING EVENTS AND COMMUNITY PROGRAMMES -->
+  <section class="events-section" id="events">
+    <div class="container">
+
+      <div class="section-title d-flex justify-content-between align-items-center flex-wrap gap-3">
+
+        <div>
+          <h2>Community Events & Programmes</h2>
+          <p>
+            Explore important community programmes, cultural celebrations,
+            and announcements.
+          </p>
+        </div>
+
+        <!-- EVENT FILTERS -->
+        <div class="event-tabs" aria-label="Filter events">
+          <button type="button" class="active" data-filter="all">
+            All Events
+          </button>
+
+          <button type="button" data-filter="september">
+            September 2026
+          </button>
+
+          <button type="button" data-filter="october">
+            October 2026
+          </button>
+        </div>
+
+      </div>
+
+
+      <!-- EVENT 1: ODWIRA FESTIVAL -->
+      <article class="event-item" data-month="september october">
+
+        <div class="row g-0 align-items-stretch">
+
+          <div class="col-lg-4">
+            <div class="event-image">
+              <img
+                src="images/odwura2026.jpeg"
+                alt="Amanokrom Odwira Festival 2026"
+                class="zoom-image"
+                loading="lazy">
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="event-content">
+
+              <h3>Akuapem Odwira@200</h3>
+
+              <p>
+                <strong>You are invited to Gyaseman Odwira 2026.</strong>
+                The Chief and People of Amanokrom-Akuapem cordially invite
+                you to join this year's Odwira Festival as we celebrate
+                our culture, tradition, and heritage. Come and experience
+                traditional drumming, a durbar of chiefs, and the unity
+                of our people. All are warmly invited.
+              </p>
+
+              <div class="event-actions">
+
+                <a href="odwira2026.php" class="read-btn">
+                  Read More <i class="fa-solid fa-arrow-right ms-2"></i>
+                </a>
+
+                <div class="event-date">
+                  <i class="fa-regular fa-calendar me-1"></i>
+                  21st September – 2nd October, 2026
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- EVENT 2: ARTISTIC ENACTMENT -->
+      <article class="event-item" data-month="july">
+
+        <div class="row g-0 align-items-stretch">
+
+          <div class="col-lg-4">
+            <div class="event-image">
+              <img
+                src="images/akatamansowar200.jpeg"
+                alt="Odwira 200 artistic enactment and public lecture"
+                class="zoom-image"
+                loading="lazy">
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="event-content">
+
+              <h3>
+                Odwira@200 Artistic Enactment & Public Lecture Series
+                Comes to Amanokrom
+              </h3>
+
+              <p>
+                Experience the rich history and culture of Akuapem through
+                a captivating artistic enactment and public lecture as
+                part of the Odwira@200 celebrations. The programme was
+                scheduled for the Amanokrom Community Centre.
+              </p>
+
+              <div class="event-actions">
+
+                <a href="enactment.php" class="read-btn">
+                  View Highlights <i class="fa-solid fa-arrow-right ms-2"></i>
+                </a>
+
+                <div class="event-date">
+                  <i class="fa-regular fa-calendar me-1"></i>
+                  24th July, 2026
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- EVENT 3: COMMITTEE MEETING -->
+      <article class="event-item" data-month="march">
+
+        <div class="row g-0 align-items-stretch">
+
+          <div class="col-lg-4">
+            <div class="event-image">
+              <img
+                src="images/odwria200.jpeg"
+                alt="Odwira 200 anniversary committee meeting"
+                class="zoom-image"
+                loading="lazy">
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="event-content">
+
+              <h3>Key Highlights from the Odwira Committee Meeting</h3>
+
+              <p>
+                Important decisions were taken during the Odwira Committee
+                Meeting held on 5th March 2026 ahead of the official launch
+                of the 200th Anniversary Odwira Festival at the
+                Okuapehene's Palace in Akropong.
+              </p>
+
+              <div class="event-actions">
+
+                <a href="proposed-odwira.php" class="read-btn">
+                  Read More <i class="fa-solid fa-arrow-right ms-2"></i>
+                </a>
+
+                <div class="event-date">
+                  <i class="fa-regular fa-calendar me-1"></i>
+                  5th March, 2026
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- EVENT 4: PROPOSED THEMES -->
+      <article class="event-item" data-month="september">
+
+        <div class="row g-0 align-items-stretch">
+
+          <div class="col-lg-4">
+            <div class="event-image">
+              <img
+                src="images/odwria200.jpeg"
+                alt="Proposed themes for Odwira 2026"
+                class="zoom-image"
+                loading="lazy">
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="event-content">
+
+              <h3>Proposed Themes for Odwira 2026</h3>
+
+              <p>
+                The proposed themes and activities for Odwira 2026 focus
+                on celebrating two centuries of heritage, strengthening
+                cultural identity, promoting community development, and
+                creating a lasting legacy for future generations of
+                Okuapeman.
+              </p>
+
+              <div class="event-actions">
+
+                <a href="proposed-odwira.php" class="read-btn">
+                  Read More <i class="fa-solid fa-arrow-right ms-2"></i>
+                </a>
+
+                <div class="event-date">
+                  <i class="fa-regular fa-calendar me-1"></i>
+                  September, 2026
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- IMAGE LIGHTBOX: ONE MODAL ONLY -->
+  <div
+    id="imageModal"
+    class="image-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Image preview">
+
+    <button type="button" class="close-modal" id="closeModal"
+            aria-label="Close image preview">
+      &times;
+    </button>
+
+    <img id="modalImage" class="modal-content-image" src="" alt="">
+
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-main">
+
+        <div class="footer-brand">
+
+          <a href="index.html" class="footer-logo">
+            <img src="images/am ano-logo.jpeg" alt="Amanokrom Logo">
+
+            <div>
+              <strong>AMANOKROM</strong>
+              <span>HERITAGE • CULTURE • UNITY</span>
+            </div>
+          </a>
+
+          <p>
+            Amanokrom is a proud Akuapem community rich in culture,
+            history, tradition and unity. We honour our heritage while
+            working together for a brighter future.
+          </p>
+
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="#" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Amanokrom</a></li>
+            <li><a href="history.html">Our History</a></li>
+            <li><a href="culture.html">Culture & Traditions</a></li>
+            <li><a href="traditional-leaders.html">Traditional Leaders</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="odwira12026.html">Odwira Gallery</a></li>
+            <li><a href="funeral.html">Funeral Announcements</a></li>
+            <li><a href="news.html">Latest News</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Get in Touch</h3>
+
+          <p>
+            <i class="fas fa-map-marker-alt"></i>
+            Amanokrom, Akuapem, Ghana
+          </p>
+
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="contact.html">Contact the Community</a>
+          </p>
+
+          <a href="contact.html" class="footer-contact-btn">
+            Send an Enquiry
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="currentYear">2026</span> Amanokrom.
+          All Rights Reserved.
+        </p>
+
+        <p>Preserving Our Heritage for Generations.</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      /* CURRENT YEAR */
+
+      const yearElement = document.getElementById("currentYear");
+
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+
+
+      /* MOBILE NAVIGATION */
+
+      const menuToggle = document.getElementById("menuToggle");
+      const mainNav = document.getElementById("mainNav");
+
+      if (menuToggle && mainNav) {
+        menuToggle.addEventListener("click", function () {
+          const isOpen = mainNav.classList.toggle("show");
+
+          menuToggle.setAttribute("aria-expanded", String(isOpen));
+
+          const icon = menuToggle.querySelector("i");
+
+          if (icon) {
+            icon.classList.toggle("fa-bars", !isOpen);
+            icon.classList.toggle("fa-xmark", isOpen);
+          }
+        });
+      }
+
+
+      /* EVENT FILTERS */
+
+      const filterButtons = document.querySelectorAll(".event-tabs button");
+      const eventItems = document.querySelectorAll(".event-item");
+
+      filterButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+
+          filterButtons.forEach(function (item) {
+            item.classList.remove("active");
+          });
+
+          button.classList.add("active");
+
+          const filter = button.dataset.filter;
+
+          eventItems.forEach(function (eventItem) {
+            const months = (eventItem.dataset.month || "").split(" ");
+
+            if (filter === "all" || months.includes(filter)) {
+              eventItem.hidden = false;
+            } else {
+              eventItem.hidden = true;
+            }
+          });
+
+        });
+      });
+
+
+      /* IMAGE LIGHTBOX */
+
+      const imageModal = document.getElementById("imageModal");
+      const modalImage = document.getElementById("modalImage");
+      const modalCaption = document.getElementById("modalCaption");
+      const closeModal = document.getElementById("closeModal");
+      const zoomImages = document.querySelectorAll(".zoom-image");
+
+      function openImage(image) {
+        imageModal.classList.add("open");
+        modalImage.src = image.src;
+        modalImage.alt = image.alt || "Amanokrom photograph";
+        modalCaption.textContent = image.alt || "";
+
+        document.body.style.overflow = "hidden";
+        closeModal.focus();
+      }
+
+      function closeImage() {
+        imageModal.classList.remove("open");
+        modalImage.src = "";
+        document.body.style.overflow = "";
+      }
+
+      zoomImages.forEach(function (image) {
+        image.addEventListener("click", function () {
+          openImage(image);
+        });
+      });
+
+      closeModal.addEventListener("click", closeImage);
+
+      imageModal.addEventListener("click", function (event) {
+        if (event.target === imageModal) {
+          closeImage();
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && imageModal.classList.contains("open")) {
+          closeImage();
+        }
+      });
+
+    });
+  </script>
+
+</body>
+</html>
+```
