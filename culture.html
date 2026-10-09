@@ -1,0 +1,902 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Culture & Traditions | Amanokrom</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+          <style>
+           
+/* =========================
+   CULTURE PAGE
+========================= */
+
+.culture-hero {
+    min-height: 280px;
+    padding: 55px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+
+    background:
+        linear-gradient(rgba(10, 45, 30, 0.65), rgba(10, 45, 30, 0.65)),
+        url("images/odwura2026.jpeg") center 40% / cover no-repeat;
+
+    border-bottom: 4px solid var(--aman-gold, #c6a04a);
+}
+
+.culture-hero-content {
+    max-width: 800px;
+}
+
+.culture-eyebrow {
+    display: inline-block;
+    color: #f0d58c;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.culture-hero h1 {
+    color: #fff;
+    font-size: clamp(34px, 5vw, 52px);
+    margin: 0 0 15px;
+}
+
+.culture-hero p {
+    max-width: 680px;
+    margin: 0 auto 25px;
+    color: #fff;
+    line-height: 1.8;
+}
+
+.culture-hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 23px;
+    background: #c6a04a;
+    color: #173e2e;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: 0.25s ease;
+}
+
+.culture-hero-btn:hover {
+    background: #e1c477;
+    color: #173e2e;
+    transform: translateY(-2px);
+}
+
+.culture-intro {
+    max-width: 850px;
+    margin: auto;
+    padding: 65px 20px 45px;
+    text-align: center;
+}
+
+.culture-label {
+    display: inline-block;
+    color: #a57e2e;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.culture-intro h2,
+.culture-section-heading h2 {
+    color: #164b35;
+    font-size: clamp(26px, 3.5vw, 36px);
+    line-height: 1.35;
+    margin: 0 0 18px;
+}
+
+.culture-intro p,
+.culture-section-heading p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+.culture-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 28px;
+    color: #b18a36;
+}
+
+.culture-divider span {
+    width: 55px;
+    height: 1px;
+    background: #c6a04a;
+}
+
+.culture-grid-section {
+    padding: 45px 20px 80px;
+    background: #f7f7f2;
+}
+
+.culture-section-heading {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.culture-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.culture-card {
+    background: #fff;
+    border: 1px solid #e8e6dd;
+    border-radius: 7px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.culture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.09);
+}
+
+.culture-card-image {
+    display: block;
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+    background: #e9e9e1;
+}
+
+.culture-card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.culture-card:hover .culture-card-image img {
+    transform: scale(1.04);
+}
+
+.culture-card-number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #c6a04a;
+    color: #173e2e;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.culture-card-content {
+    padding: 25px 23px 28px;
+}
+
+.culture-card-category {
+    color: #a57e2e;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.culture-card-content h3 {
+    color: #164b35;
+    font-size: 21px;
+    margin: 10px 0 12px;
+}
+
+.culture-card-content p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.85;
+    margin: 0 0 20px;
+}
+
+.culture-read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #164b35;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.culture-read-more i {
+    color: #b18a36;
+    transition: transform 0.2s ease;
+}
+
+.culture-read-more:hover {
+    color: #a57e2e;
+}
+
+.culture-read-more:hover i {
+    transform: translateX(4px);
+}
+
+
+/* HERITAGE QUOTE */
+
+.culture-quote {
+    padding: 75px 20px;
+    text-align: center;
+    background: #164b35;
+    border-top: 4px solid #c6a04a;
+    border-bottom: 4px solid #c6a04a;
+}
+
+.culture-quote-inner {
+    max-width: 800px;
+    margin: auto;
+}
+
+.culture-quote-inner > i {
+    color: #e0c477;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.culture-quote h2 {
+    color: #fff;
+    font-size: clamp(26px, 4vw, 38px);
+    margin: 0 0 15px;
+}
+
+.culture-quote p {
+    max-width: 650px;
+    margin: 0 auto 22px;
+    color: #e8eee9;
+    line-height: 1.9;
+}
+
+.culture-quote-inner span {
+    color: #e0c477;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* CULTURAL GALLERY */
+
+.culture-gallery-preview {
+    padding: 75px 20px;
+    background: #fff;
+}
+
+.culture-gallery-strip {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.culture-gallery-strip a {
+    display: block;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 5px;
+    background: #eee;
+}
+
+.culture-gallery-strip img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.culture-gallery-strip a:hover img {
+    transform: scale(1.06);
+}
+
+.culture-gallery-action {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .culture-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .culture-gallery-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .culture-gallery-strip a {
+        height: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .culture-hero {
+        min-height: 240px;
+        padding: 40px 18px;
+    }
+
+    .culture-intro {
+        padding: 45px 20px 35px;
+    }
+
+    .culture-grid-section {
+        padding: 35px 16px 55px;
+    }
+
+    .culture-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .culture-card-image {
+        height: 235px;
+    }
+
+    .culture-card-content {
+        padding: 22px 20px 25px;
+    }
+
+    .culture-quote {
+        padding: 55px 20px;
+    }
+
+    .culture-gallery-preview {
+        padding: 50px 16px;
+    }
+
+    .culture-gallery-strip {
+        gap: 10px;
+    }
+
+    .culture-gallery-strip a {
+        height: 165px;
+    }
+}
+ 
+          </style>
+</head>
+
+<body>
+ 
+<header class="site-header" id="siteHeader">
+
+    <div class="header-container">
+
+        <a href="index.html" class="site-logo">
+            <img src="images/amano-logo.jpeg"
+                 alt="Amanokrom Logo"
+                 onerror="this.onerror=null;this.src='images/am ano-logo.jpeg';">
+
+            <div class="logo-text">
+                <span class="logo-title">AMANOKROM</span>
+                <span class="logo-subtitle">HERITAGE • CULTURE • UNITY</span>
+            </div>
+        </a>
+
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="main-nav" id="mainNav">
+
+            <ul class="nav-list">
+
+                <li>
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="about.html" class="nav-link">
+                        About
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About Amanokrom</a></li>
+                        <li><a href="about.html#mission">Mission & Vision</a></li>
+                        <li><a href="about.html#community">Our Community</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="history.html" class="nav-link">History</a>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="culture.html" class="nav-link">
+                        Culture
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="culture.html">Our Culture</a></li>
+                        <li><a href="culture.html#odwira">Odwira Festival</a></li>
+                        <li><a href="culture.html#traditions">Customs & Traditions</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="traditional-leaders.html" class="nav-link">
+                        Leadership
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="traditional-leaders.html">Traditional Leaders</a></li>
+                        <li><a href="traditional-leaders.html#chief">Chief</a></li>
+                        <li><a href="traditional-leaders.html#queen-mother">Queen Mother</a></li>
+                        <li><a href="traditional-leaders.html#council">Traditional Council</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="gallery.html" class="nav-link">
+                        Gallery
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="odwira2026.html">Odwira Gallery</a></li>
+                        <li><a href="gallery.html#videos">Videos</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="funeral.html" class="nav-link">Funeral</a>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="news.html" class="nav-link">
+                        News
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="news.html">Latest News</a></li>
+                        <li><a href="news.html#announcements">Announcements</a></li>
+                        <li><a href="news.html#events">Community Events</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="contact.html" class="nav-link contact-link">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- HERO -->
+<section class="culture-hero">
+    <div class="culture-hero-content">
+        <span class="culture-eyebrow">OUR IDENTITY • OUR HERITAGE</span>
+
+        <h1>Culture & Traditions</h1>
+
+        <p>
+            Discover the customs, festivals, symbols and traditions
+            that preserve the identity and heritage of Amanokrom.
+        </p>
+
+        <a href="#our-culture" class="culture-hero-btn">
+            Explore Our Culture
+            <i class="fas fa-arrow-down"></i>
+        </a>
+    </div>
+</section>
+
+
+<!-- INTRODUCTION -->
+<section class="culture-intro" id="our-culture">
+
+    <span class="culture-label">THE HEART OF AMANOKROM</span>
+
+    <h2>A Heritage Passed From Generation to Generation</h2>
+
+    <p>
+        Culture connects us to our ancestors, shapes our identity and
+        brings our community together. In Amanokrom, our traditions,
+        festivals, traditional leadership, music, clothing and shared
+        values form an important part of our Akuapem heritage.
+    </p>
+
+    <div class="culture-divider">
+        <span></span>
+        <i class="fas fa-leaf"></i>
+        <span></span>
+    </div>
+
+</section>
+
+
+<!-- CULTURE CARDS -->
+<section class="culture-grid-section">
+
+    <div class="culture-section-heading">
+        <span class="culture-label">EXPLORE OUR TRADITIONS</span>
+        <h2>The Richness of Our Culture</h2>
+        <p>
+            Explore the traditions that continue to inspire pride,
+            unity and respect within our community.
+        </p>
+    </div>
+
+    <div class="culture-grid">
+
+        <!-- ODWIRA -->
+        <article class="culture-card">
+            <a href="news.html" class="culture-card-image">
+                <img src="images/odwura2026.jpeg"
+                     alt="Odwira celebrations and cultural heritage">
+                <span class="culture-card-number">01</span>
+            </a>
+
+            <div class="culture-card-content">
+                <span class="culture-card-category">FESTIVALS</span>
+                <h3>Odwira Festival</h3>
+                <p>
+                    Odwira is a significant festival in Akuapem tradition,
+                    bringing people together to honour heritage, remember
+                    ancestors and strengthen community bonds.
+                </p>
+                <a href="news.html" class="culture-read-more">
+                    Discover More <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+
+        <!-- TRADITIONAL CLOTHING -->
+        <article class="culture-card">
+            <a href="gallery.html" class="culture-card-image">
+                <img src="images/cloth-odwira.jpeg"
+                     alt="Traditional Ghanaian clothing">
+                <span class="culture-card-number">02</span>
+            </a>
+
+            <div class="culture-card-content">
+                <span class="culture-card-category">CLOTHING</span>
+                <h3>Traditional Attire</h3>
+                <p>
+                    Traditional cloth and ceremonial attire express identity,
+                    dignity and belonging during festivals, important
+                    gatherings and cultural occasions.
+                </p>
+                <a href="gallery.html" class="culture-read-more">
+                    Explore the Gallery <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+
+        <!-- CHIEFTAINCY -->
+        <article class="culture-card">
+            <a href="leadership.html" class="culture-card-image">
+                <img src="images/palace.jpg"
+                     alt="Traditional palace and chieftaincy">
+                <span class="culture-card-number">03</span>
+            </a>
+
+            <div class="culture-card-content">
+                <span class="culture-card-category">TRADITIONAL LEADERSHIP</span>
+                <h3>Chieftaincy & Custom</h3>
+                <p>
+                    Traditional leadership plays an important role in
+                    preserving customs, guiding community affairs and
+                    maintaining a connection with our ancestors.
+                </p>
+                <a href="leadership.html" class="culture-read-more">
+                    Meet Our Leaders <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+
+        <!-- MUSIC AND DANCE -->
+        <article class="culture-card">
+            <a href="gallery.html" class="culture-card-image">
+                <img src="images/akatamansowar200.jpeg"
+                     alt="Cultural performance and community celebration">
+                <span class="culture-card-number">04</span>
+            </a>
+
+            <div class="culture-card-content">
+                <span class="culture-card-category">PERFORMANCE</span>
+                <h3>Drumming, Music & Dance</h3>
+                <p>
+                    Traditional rhythms, songs and dance bring people
+                    together and help pass cultural knowledge and
+                    community stories to younger generations.
+                </p>
+                <a href="gallery.html" class="culture-read-more">
+                    View Cultural Moments <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+
+        <!-- CUSTOMS AND VALUES -->
+        <article class="culture-card">
+            <a href="history.html" class="culture-card-image">
+                <img src="images/amanokrom1.jpg"
+                     alt="Amanokrom community and heritage">
+                <span class="culture-card-number">05</span>
+            </a>
+
+            <div class="culture-card-content">
+                <span class="culture-card-category">COMMUNITY VALUES</span>
+                <h3>Customs & Community Life</h3>
+                <p>
+                    Respect for elders, hospitality, family connections
+                    and communal responsibility are important themes
+                    in preserving our heritage.
+                </p>
+                <a href="history.html" class="culture-read-more">
+                    Learn Our History <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+
+        <!-- CULTURAL HERITAGE -->
+        <article class="culture-card">
+            <a href="gallery.html" class="culture-card-image">
+                <img src="images/amanokrom2.jpg"
+                     alt="Amanokrom heritage and community life">
+                <span class="culture-card-number">06</span>
+            </a>
+
+            <div class="culture-card-content">
+                <span class="culture-card-category">OUR LEGACY</span>
+                <h3>Preserving Our Heritage</h3>
+                <p>
+                    Photographs, oral histories, community records
+                    and cultural education help ensure that our
+                    traditions remain accessible to future generations.
+                </p>
+                <a href="gallery.html" class="culture-read-more">
+                    Explore Our Heritage <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+
+<!-- HERITAGE QUOTE -->
+<section class="culture-quote">
+    <div class="culture-quote-inner">
+        <i class="fas fa-quote-left"></i>
+
+        <h2>Our Culture, Our Pride, Our Future</h2>
+
+        <p>
+            Preserving our heritage today gives future generations
+            a stronger connection to their roots.
+        </p>
+
+        <span>AMANOKROM • AKUAPEM • GHANA</span>
+    </div>
+</section>
+
+
+<!-- CULTURAL GALLERY PREVIEW -->
+<section class="culture-gallery-preview">
+
+    <div class="culture-section-heading">
+        <span class="culture-label">MOMENTS THAT MATTER</span>
+        <h2>Experience Our Heritage</h2>
+        <p>
+            Explore photographs documenting our people, celebrations
+            and cultural traditions.
+        </p>
+    </div>
+
+    <div class="culture-gallery-strip">
+        <a href="gallery.html">
+            <img src="images/odwura2026.jpeg" alt="Odwira festival">
+        </a>
+
+        <a href="gallery.html">
+            <img src="images/cloth-odwira.jpeg" alt="Traditional attire">
+        </a>
+
+        <a href="gallery.html">
+            <img src="images/akatamansowar200.jpeg" alt="Cultural gathering">
+        </a>
+
+        <a href="gallery.html">
+            <img src="images/palace.jpg" alt="Traditional palace">
+        </a>
+    </div>
+
+    <div class="culture-gallery-action">
+        <a href="gallery.html" class="culture-hero-btn">
+            Visit Our Gallery <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+
+</section>
+
+
+ 
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    <img src="images/am ano-logo.jpeg"
+                         alt="Amanokrom Logo">
+
+                    <div>
+                        <strong>AMANOKROM</strong>
+                        <span>HERITAGE • CULTURE • UNITY</span>
+                    </div>
+                </a>
+
+                <p>
+                    Amanokrom is a proud Akuapem community rich
+                    in culture, history, tradition and unity.
+                    We honour our heritage while working together
+                    for a brighter future.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Amanokrom</a></li>
+                    <li><a href="history.html">Our History</a></li>
+                    <li><a href="culture.html">Culture & Traditions</a></li>
+                    <li><a href="traditional-leaders.html">Traditional Leaders</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Explore</h3>
+
+                <ul>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                    <li><a href="odwira12026">Odwira Gallery</a></li>
+                    <li><a href="funeral.html">Funeral Announcements</a></li>
+                    <li><a href="news.html">Latest News</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>Get in Touch</h3>
+
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    Amanokrom, Akuapem, Ghana
+                </p>
+
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="contact.html">Contact the Community</a>
+                </p>
+
+                <a href="contact.html" class="footer-contact-btn">
+                    Send an Enquiry
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; <span id="currentYear">2026</span>
+                Amanokrom. All Rights Reserved.
+            </p>
+
+            <p>
+                Preserving Our Heritage for Generations.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", function () {
+            const isOpen = navMenu.classList.toggle("show");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+
+            menuToggle.innerHTML = isOpen
+                ? '<i class="fas fa-times"></i>'
+                : '<i class="fas fa-bars"></i>';
+        });
+    }
+
+    document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+</script>
+
+</body>
+</html>
+ 
